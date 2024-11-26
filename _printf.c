@@ -1,5 +1,5 @@
 #include <stdarg.h>
-#include <stdio.h>
+#include <unistd.h>
 #include "main.h"
 
 /**
@@ -18,8 +18,8 @@ while (*format != '\0')
 {
 if (*format == '%')
 count += print_format(*(++format), ap);
-else
-count += write (1, format, 1);
+ else
+   count += write(1, format, 1); 
 ++format; 
 }
 va_end (ap); 
