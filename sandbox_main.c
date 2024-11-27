@@ -89,15 +89,12 @@ So essentially starting what has been passed through as arguments*/
 /* Text Segment */
 int main(void)
 {
-    int len;
-    int len2;
-
     _printf(NULL);
     _printf("H%!@#$^&*()\n",'h');
 
     _printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");
-    len = _printf("Percent:[%%]\n");
+    _printf("Percent:[%%]\n");
 
     return (0);
 }
