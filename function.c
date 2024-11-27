@@ -55,7 +55,7 @@ putchar('%');
 char_counter = char_counter + 1;
 break;
 default:
-_printf("**ERROR** |-- UNKNOWN FORMAT SPECIFIER --| **ERROR**\n");
+_printf("");
 break;
 }
 }
