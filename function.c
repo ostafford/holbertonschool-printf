@@ -25,6 +25,11 @@ while (*format)
 if (*format == '%')
 {
 format = format + 1;
+if (*format == '\0')
+{
+va_end(args);
+return(-1);
+}
 switch (*format)
 {
 case 'c':
