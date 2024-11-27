@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
-#include <stdio.h>
 
 int _printf(const char *format, ...);
 
@@ -14,7 +12,8 @@ int main(void)
 {
 
 _printf(NULL);
-_printf("%");
+_printf("Length:[%d, %i]\n", len, len);
+_printf("Negative:[%d]\n", -762534);
 
 _printf("Character:[%c]\n", 'H');
 _printf("String:[%s]\n", "I am a string !");

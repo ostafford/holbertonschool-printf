@@ -28,3 +28,17 @@ Step 11: `default` allows the switch statement to handle any unknown format spec
 
 Step 12: `va_end` will clean up the va_list (step 1)
 
+
+
+# print_char Steps
+
+prototype 
+`int print_char(char c) {   return (write(1, &c, 1));  }`
+
+Step 1: `write()` writes the data once it is called
+
+Step 2: value `1` is the `stdout` descriptor which is the standard output.
+
+Step 3: `pointer(&c)` address of character to be written to specifier `%c`
+
+Step 4: byte value `1`. how many bytes does a character take? 1.
