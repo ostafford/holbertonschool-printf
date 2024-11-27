@@ -18,10 +18,7 @@ int _printf(const char *format, ...)
 va_list args;
 int char_counter = 0;
 if (format == NULL)
-{
-_printf("");
 return (-1);
-}
 va_start(args, format);
 while (*format)
 {
@@ -58,7 +55,7 @@ break;
 default:
 putchar('%');
 putchar(*format);
-char_counter += 2;
+char_counter += 33;
 break;
 }
 }
