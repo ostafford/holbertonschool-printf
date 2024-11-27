@@ -19,9 +19,10 @@ int _printf(const char *format, ...)
 
     /* Before continuing the execution if format fails (NULL)
     print error message*/
-    if (format == NULL){
-    _printf("**ERROR** --| NOT A VALID STRING INPUT!! |-- **ERROR** \n");
-        return -1;
+    if (format == NULL)
+    {
+        printf("DEBUG: Format is NULL\n");
+        return (-1);
     }
 
 /* Starts the variable argument list 
@@ -31,14 +32,23 @@ So essentially starting what has been passed through as arguments*/
     /* Loop through each character in the format string */
     while (*format)
     {
+        printf("DEBUG: Current format character = '%c'\n", *format);
         /* If it has the format specifier continue with the switch statements c, s, % */
         if (*format == '%')
         {
-            /* ++ allows the if statement to move along the string by 1 character */
             format = format + 1;
+            if (*format == '\0')
+            {
+                printf("DEBUG: Found '%%' but no specifier after it!\n");
+                va_end(args);
+                return(-1);
+            }
+            /* ++ allows the if statement to move along the string by 1 character */
+            printf("DEBUG: Found specifier '%%%c'\n", *format);
             switch (*format)
             {
                 case 'c':
+                    printf("DEBUG: Printing character '%c'\n", c);
                     putchar((char)va_arg(args, int));
                     char_counter = char_counter + 1;
                     break;
@@ -51,6 +61,7 @@ So essentially starting what has been passed through as arguments*/
                     if str is not NULL then continue.
                     while *str is getting each character checked it will print each character as a string hence the *str++.
                     else if it is a NULL string to print the null message. */
+                        printf("DEBUG: Printing string '%s'\n", str);
                         while (*str)
                         {
                             putchar(*str++);
@@ -60,6 +71,7 @@ So essentially starting what has been passed through as arguments*/
                     else
                     {
                         /* the value of char_count is now the error message due to the encounter */
+                         printf("DEBUG: Printing (null)\n");
                         char_counter += _printf("**ERROR** --| STRING HANDLE ERROR |-- **ERROR**\n");
                     }
                     break;
