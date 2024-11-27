@@ -19,7 +19,7 @@ va_list args;
 int char_counter = 0;
 if (format == NULL)
 {
-_printf("**ERROR** --| NOT A VALID STRING INPUT!! |-- **ERROR** \n");
+_printf("");
 return (-1);
 }
 va_start(args, format);
