@@ -46,7 +46,7 @@ char_counter = char_counter + 1;
 }
 else
 {
-char_counter += _printf("**ERROR** --| STRING HANDLE ERROR |-- **ERROR**\n");
+char_counter += _printf("(null)");
 }
 break;
 }
