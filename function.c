@@ -18,10 +18,7 @@ int _printf(const char *format, ...)
 va_list args;
 int char_counter = 0;
 if (format == NULL)
-{
-_printf("**ERROR** --| NOT A VALID STRING INPUT!! |-- **ERROR** \n");
 return (-1);
-}
 va_start(args, format);
 while (*format)
 {
@@ -46,7 +43,12 @@ char_counter = char_counter + 1;
 }
 else
 {
-char_counter += _printf("**ERROR** --| STRING HANDLE ERROR |-- **ERROR**\n");
+char *empty_string = "(null)";
+while (*empty_string)
+{
+putchar(*empty_string++);
+char_counter = char_counter + 1;
+}
 }
 break;
 }
@@ -55,7 +57,9 @@ putchar('%');
 char_counter = char_counter + 1;
 break;
 default:
-_printf("**ERROR** |-- UNKNOWN FORMAT SPECIFIER --| **ERROR**\n");
+putchar('%');
+putchar(*format);
+char_counter += 2;
 break;
 }
 }

@@ -17,6 +17,7 @@ int len2;
 
 _printf(NULL);
 _printf("H%!@#$^&*()\n", 'h');
+_printf("%");
 
 _printf("Character:[%c]\n", 'H');
 _printf("String:[%s]\n", "I am a string !");
