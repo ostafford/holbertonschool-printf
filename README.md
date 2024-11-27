@@ -24,7 +24,7 @@ Step 9: `else` statement in 's' case. Reason for this is to catch any errors in 
 
 Step 10: `special characters` last case of the switch statement will print what character is after the format specifier being the `%`. 
 
-Step 11: `default` allows the switch statement to handle any unknown format specifiers and will print the format specifier followed by the character. This is basically a safe guard for when all other cases have been passed but has passed the format it will just print out an error message followed by what the string is. 
+Step 11: `default` allows the switch statement to handle any unknown format specifiers and will print the format specifier followed by the character. This is basically a safe guard for when all other cases have been passed but has passed the format it will just print out an error message followed by what the string is. **(dont forget to allow your default to print what the unknown specifier is followed by the amount)**
 
 Step 12: `va_end` will clean up the va_list (step 1)
 

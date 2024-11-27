@@ -56,8 +56,9 @@ putchar('%');
 char_counter = char_counter + 1;
 break;
 default:
-_printf("");
-char_counter += 0;
+putchar('%');
+putchar(*format);
+char_counter += 2;
 break;
 }
 }
