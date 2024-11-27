@@ -46,7 +46,8 @@ else
 char *empty_string = "(null)";
 while (*empty_string)
 {
-putchar(*empty_string++);
+putchar(*empty_string);
+empty_string = empty_string + 1;
 char_counter = char_counter + 1;
 }
 }
