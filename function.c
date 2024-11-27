@@ -19,7 +19,7 @@ va_list args;
 int char_counter = 0;
 if (format == NULL)
 {
-_printf("");
+write("");
 return (-1);
 }
 va_start(args, format);
@@ -46,7 +46,8 @@ char_counter = char_counter + 1;
 }
 else
 {
-char_counter += _printf("(null)");
+write("(null)");
+char_counter += 6;
 }
 break;
 }
@@ -55,7 +56,8 @@ putchar('%');
 char_counter = char_counter + 1;
 break;
 default:
-_printf("");
+write("");
+char_counter += 0;
 break;
 }
 }
