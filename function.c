@@ -43,8 +43,12 @@ char_counter = char_counter + 1;
 }
 else
 {
-_printf("(null)");
-char_counter += 6;
+char *empty_string = "(null)";
+while (*empty_string)
+{
+putchar(*empty_string++);
+char_counter = char_counter + 1;
+}
 }
 break;
 }
@@ -55,7 +59,7 @@ break;
 default:
 putchar('%');
 putchar(*format);
-char_counter += 33;
+char_counter += 2;
 break;
 }
 }
