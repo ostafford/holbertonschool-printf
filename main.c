@@ -1,8 +1,9 @@
 #include "main.h"
+#include <stdarg.h>
 #include <stdio.h>
 
 /* Function Prototype */
-
+int _printf(const char *format, ...);
 
 /* Data Segment */
 
@@ -16,16 +17,13 @@ int main(void)
 {
     int len;
     int len2;
-    unsigned int ui;
-    void *addr;
+
+    _printf(NULL);
+    _printf("H%!@#$^&*()\n",'h');
 
     _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");
-    printf("String:[%s]\n", "I am a string !");
     len = _printf("Percent:[%%]\n");
-    len2 = printf("Percent:[%%]\n");
 
-    
     return (0);
 }
