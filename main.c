@@ -9,8 +9,11 @@
  */
 int main(void)
 {
-  int count;
+  char array[] = "doo doo";
 
-  count = _printf("Hello %s\n", "John");
-  _printf("This shit working? %s\n", count); 
+  _printf("Hello %s\n", "John");
+  _printf("This shit %s working? %s\n", array, "ahhahahahhaha");
+  _printf("%d\n", 123123123);
+  
+  return (0); 
 }
