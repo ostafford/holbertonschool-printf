@@ -1,51 +1,36 @@
 #include "main.h"
 
 /**
- * _printf - reinventing the printf function
- * @format: The format string that controls the output
- * This function works similarly to the standard printf function,
- * with custom handling of format specifiers.
- * Required support `%c` `%s` `%%`.
- * If the format string is NULL, it prints an error message.
- * Return: The number of characters printed (excluding the null byte).
- * If the format is NULL, returns -1.
+ * _printf - Printf function
+ * @format: format string
+ * Return: Printed chars
  */
-
 int _printf(const char *format, ...)
 {
-    va_list args;
-    int i = 0, count = 0;
+    int i;
+    int printed_chars = 0;
+    va_list list;
 
-    if (!format || *format == '\0')
+    if (!format)
         return (-1);
 
-    va_start(args, format);
+    va_start(list, format);
 
-    while (format[i])
+    for (i = 0; format[i] != '\0'; i++)
     {
-        if (format[i] == '%')
+        if (format[i] != '%')
         {
-            i++;
-            
-            if (format[i] == 'c')
-                count += print_char(va_arg(args, int));
-            else if (format[i] == 's')
-                count += print_string(va_arg(args, char *));
-            else if (format[i] == '%')
-                count += write(1, "%", 1);
-            else
-                return (-1);
-        }
-        else
-        {
-            count += write(1, &format[i], 1); 
+            _putchar(format[i]);
+            printed_chars++;
+            continue;
         }
 
-        i++;
+        if (format[i + 1] == '\0')
+            return (-1);
+
+        printed_chars += handle_print(format, &i, list);
     }
 
-    va_end(args);
-    return (count);
+    va_end(list);
+    return (printed_chars);
 }
-
-
