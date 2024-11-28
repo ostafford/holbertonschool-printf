@@ -1,0 +1,62 @@
+NAME:
+_printf - formats output to the standard output.
+
+SYNOPSIS
+_printf(const char *format, ...);
+
+DESCRIPTION
+
+The function _printf writes output to the standard output (stdout).
+
+Escape sequences - Allow specific control of the output.
+Common interpreted sequences are:
+\n - newline
+
+\\ - A backslash (\) character
+
+\" - A double quote (") character
+
+\' - A single quote (') character
+
+
+Format specifiers - Specific control of how data should be interpreted for input.
+
+%d - Signed decimal integer
+
+%i - Signed decimal integer
+
+%c - Single character
+
+%s - String [null-terminated char array] 
+
+
+EXAMPLES
+
+Print integer
+int num = 21;
+_printf("Number: %d\n", num);
+
+Output: Number: 21
+
+
+Print character
+int cha = B;
+_printf("Character: %c\n", cha);
+
+Output: Character: B
+
+
+Print string
+char str[] = "Easy Easy,"
+_printf("%s what's good?", str);
+
+Output: Easy Easy, what's good?
+
+AUTHORS
+
+Okky Stafford
+Rico Pascua
+
+November 2024
+Holberton Australia
+
