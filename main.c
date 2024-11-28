@@ -11,13 +11,14 @@ int _printf(const char *format, ...);
 int main(void)
 {
 
-_printf(NULL);
-_printf("Length:[%d, %i]\n", len, len);
-_printf("Negative:[%d]\n", -762534);
+    _printf("Character:[%c]\n", 'H');
+    printf("Character:[%c]\n", 'H');
 
-_printf("Character:[%c]\n", 'H');
-_printf("String:[%s]\n", "I am a string !");
-_printf("Percent:[%%]\n");
+    _printf("String:[%s]\n", "I am a string !");
+    printf("String:[%s]\n", "I am a string !");
+
+    _printf("Percent:[%%]\n");
+    printf("Percent:[%%]\n");
 
 return (0);
 }
