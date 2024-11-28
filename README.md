@@ -53,13 +53,35 @@ int print_digit(int d);
 ## _putchar.c:
 
 - Contains the implementation of _putchar function
-- Uses write system call to output characters
+- Uses `write` system call to output characters (`unistd.h`)
 
 <details>
     <summary>Function Explanation</summary>
 
-```c#
-insert text here
+```c
+int _putchar(char c)
+/* 
+ * 'int' -> This is the return type, indicating the function will return an integer.
+ * '_putchar' -> The name of the function (you can call it anything you want, but '_putchar' is conventional for this purpose).
+ * '(char c)' -> The parameter 'c', of type 'char', representing the character to print.
+ *              (You can choose a different name for the parameter, but 'c' is short and common for this use.)
+ */
+{
+return (write(1, &c, 1));
+/*
+ * 'return' -> Returns (does not print) the result of the 'write' call.
+ *             - If successful, it returns '1' (1 character written).
+ *             - If an error occurs, it returns '-1'.
+ * 'write' -> A system call that writes data directly to a file descriptor.
+ *            (What's a 'file descriptor'? Think of it as a sticky note where the number
+ *             identifies a specific file or output device.)
+ * '1' -> Represents the file descriptor for standard output ('stdout').
+ * '&c' -> A 'pointer' to the memory location of the character 'c'.
+ * '1' -> The number of bytes to write. Since a 'char' is 1 byte, this specifies
+ *        writing exactly 1 character.
+ */
+}
+
 ```
 </details>
 
