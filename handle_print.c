@@ -27,6 +27,11 @@ case '%':
 printed_chars += print_percent();
 break;
 
+case 'd':
+case 'i':
+printed_chars += print_int(list);
+break;
+
 default:
 /* Handle unknown specifier */
 _putchar('%');

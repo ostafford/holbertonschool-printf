@@ -11,6 +11,8 @@ int handle_print(const char *format, int *i, va_list list);
 int print_char(va_list types);
 int print_string(va_list types);
 int print_percent(void);
+int print_int(va_list types);
+int print_digit(int d);
 
 /* Helper function prototype */
 int _putchar(char c);

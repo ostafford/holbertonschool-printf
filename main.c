@@ -10,8 +10,19 @@ int _printf(const char *format, ...);
 
 int main(void)
 {
+
+int len;
+int len2;
+unsigned int ui;
+
 _printf("Character:[%c]\n", 'H');
 _printf("String:[%s]\n", "I am a string !");
 _printf("Percent:[%%]\n");
+
+_printf("Length:[%d, %i]\n", len, len);
+_printf("Negative:[%d]\n", -762534);
+_printf("Len:[%d]\n", len);
+
+
 return (0);
 }

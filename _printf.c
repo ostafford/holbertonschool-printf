@@ -9,6 +9,7 @@ int _printf(const char *format, ...)
 {
 int i;
 int printed_chars = 0;
+
 va_list list;
 
 if (!format)
