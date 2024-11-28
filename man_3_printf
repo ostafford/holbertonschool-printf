@@ -64,10 +64,9 @@ SEE ALSO
   man printf(1), man printf(3), man puts(3), man putchar(3)
 
 BUGS
+
+  Don't mistake _putchar for putchar. 
   
- 
-
-
 
 AUTHORS
 
