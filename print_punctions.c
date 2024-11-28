@@ -59,7 +59,7 @@ write (1, "-", 1);
 return print_digit(-n, base) +1;
 }
 else if (n < base)
-return print_char(symbols[n]);
+return _putchar(symbols[n]);
 else
 {
 count = print_digit(n / base, base);
