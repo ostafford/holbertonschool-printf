@@ -27,7 +27,7 @@ Format specifiers - Specific control of how data should be interpreted for input
 
 %c - Single character
 
-%s - String [null-terminated char array] 
+%s - String [null-terminated char array]
 
 
 EXAMPLES

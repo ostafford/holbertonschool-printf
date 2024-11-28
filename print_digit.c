@@ -7,8 +7,8 @@
  */
 int print_int(va_list types)
 {
-    int n = va_arg(types, int);
-    return (print_digit(n));
+int n = va_arg(types, int);
+return (print_digit(n));
 }
 
 /**
@@ -18,23 +18,23 @@ int print_int(va_list types)
  */
 int print_digit(int n)
 {
-    int count = 0;
-    unsigned int num;
+int count = 0;
+unsigned int digit;
 
-    if (n < 0)
-    {
-        _putchar('-');
-        count++;
-        num = -n;
-    }
-    else
-        num = n;
+if (n < 0)
+{
+_putchar('-');
+count++;
+digit = -n;
+}
+else
+digit = n;
 
-    if (num / 10)
-        count += print_digit(num / 10);
+if (digit / 10)
+count += print_digit(digit / 10);
 
-    _putchar((num % 10) + '0');
-    count++;
+_putchar((digit % 10) + '0');
+count++;
 
-    return (count);
+return (count);
 }
