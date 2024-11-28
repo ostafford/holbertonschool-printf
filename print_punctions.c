@@ -7,8 +7,8 @@
  */
 int print_char(va_list types)
 {
-    char c = va_arg(types, int);
-    return (_putchar(c));
+char c = va_arg(types, int);
+return (_putchar(c));
 }
 
 /**
@@ -18,19 +18,19 @@ int print_char(va_list types)
  */
 int print_string(va_list types)
 {
-    int length = 0;
-    char *str = va_arg(types, char*);
+int length = 0;
+char *str = va_arg(types, char*);
 
-    if (!str)
-        str = "(null)";
+if (!str)
+str = "(null)";
 
-    while (str[length] != '\0')
-    {
-        _putchar(str[length]);
-        length++;
-    }
+while (str[length] != '\0')
+{
+_putchar(str[length]);
+length++;
+}
 
-    return (length);
+return (length);
 }
 
 /**
@@ -39,6 +39,6 @@ int print_string(va_list types)
  */
 int print_percent(void)
 {
-    _putchar('%');
-    return (1);
+_putchar('%');
+return (1);
 }
