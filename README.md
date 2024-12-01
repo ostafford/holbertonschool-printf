@@ -335,16 +335,19 @@ int print_digit(int n)          /* 'int d' -> The digit to print as an integer (
     if (digit / 10)             /*  Checks if the number has more than one digit (i.e., it is greater than 9)
                                  *  
                                  */
-        count += print_digit(digit / 10);  /* Recursively calls print_digit to print the higher digits (if any) 
-        * purpose of this recursion is to process and print each digit of the number from the most significant (leftmost) digit to the least significant (rightmost) digit 
-        *
-        */
+        count += print_digit(digit / 10);  /*   Recursively calls print_digit to print the higher digits (if any) 
+                                            *   purpose of this recursion is to process and print each digit 
+                                            *   of the number from the most significant (leftmost) digit to the least significant (rightmost) digit 
+                                            */
 
-    _putchar((digit % 10) + '0');  /* Prints the current digit (the ones place)
-    * % operator (modulus) computes the remainder when digit is divided by 10. This operation extracts the last digit (ones place) of the number. So working in reverse to the previous command. 
-    *
-    * '+ '0'' -> Adding '0' to a number between 0 and 9 converts it into its corresponding ASCII value (character).
-    */
+    _putchar((digit % 10) + '0');           /*  Prints the current digit (the ones place)
+                                             *  % operator (modulus) computes the remainder 
+                                             *  when digit is divided by 10. 
+                                             *  This operation extracts the last digit (ones place) of the number. 
+                                             *  So working in reverse to the previous command. 
+                                             *
+                                             *  '+ '0''     -> Adding '0' to a number between 0 and 9 converts it into its corresponding ASCII value (character).
+                                             */
     count++;            /* Increments the count for this digit */
 
     return (count);     /* Returns the total number of characters printed */
