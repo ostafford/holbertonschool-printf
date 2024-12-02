@@ -65,7 +65,9 @@ SEE ALSO
 
 BUGS
 
-  Don't mistake _putchar for putchar. 
+  Don't mistake _putchar for putchar.
+  
+  Doesn't do everything printf does. 
   
 
 AUTHORS
